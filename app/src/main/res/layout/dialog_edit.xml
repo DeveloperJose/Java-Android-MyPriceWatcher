@@ -3,20 +3,58 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Item Name"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/editURL"
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="URL"
-        android:inputType="textMultiLine" />
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/itemLblURL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="URL:" />
+
+            <EditText
+                android:id="@+id/editURL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                android:ems="10"
+                android:inputType="textUri|textMultiLine"
+                android:lines="3"
+                android:scrollbars="horizontal|vertical"
+                android:singleLine="false"
+                android:text="https://www.homedepot.com/p/Milwaukee-M12-12-Volt-Lithium-Ion-Cordless-Oscillating-Multi-Tool-and-Impact-Driver-Combo-Kit-2-Tool-with-Battery-and-Charger-2462-21MT/310343044" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight=".8"
+                android:ems="10"
+                android:inputType="textMultiLine|text"
+                android:lines="3" />
+
+        </TableRow>
+
+    </TableLayout>
+
 </LinearLayout>

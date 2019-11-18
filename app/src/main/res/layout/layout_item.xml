@@ -2,13 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_main_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorItemBG">
+    android:background="@drawable/item_layout_bg">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/item_layout_bg"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -19,11 +21,11 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center_vertical"
                 android:padding="8dp"
-                app:srcCompat="@android:drawable/sym_def_app_icon" />
+                app:srcCompat="@drawable/ic_store_lowes" />
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -41,9 +43,13 @@
 
                     <TextView
                         android:id="@+id/itemTextName"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="~Name Here~" />
+                        android:layout_weight=".8"
+                        android:maxLines="3"
+                        android:minLines="1"
+                        android:scrollbars="horizontal|vertical"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a lacus nisl. Suspendisse posuere eget nunc in mattis. Proin mi enim, scelerisque eget ligula vel, mattis accumsan augue." />
                 </TableRow>
 
                 <TableRow
@@ -60,6 +66,7 @@
                         android:id="@+id/itemTextInitialPrice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight=".8"
                         android:text="~Initial Price Here~" />
                 </TableRow>
 
@@ -78,6 +85,7 @@
                         android:id="@+id/itemTextCurrentPrice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight=".8"
                         android:text="~Current Price Here~" />
 
                 </TableRow>
@@ -96,6 +104,7 @@
                         android:id="@+id/itemTextChangedPercent"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_weight=".8"
                         android:text="~Change Here~" />
 
                 </TableRow>
@@ -114,36 +123,13 @@
                         android:id="@+id/itemTextURL"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="~URL here~" />
+                        android:layout_weight=".8"
+                        android:maxLines="3"
+                        android:minLines="1"
+                        android:scrollbars="horizontal|vertical"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a lacus nisl. Suspendisse posuere eget nunc in mattis. Proin mi enim, scelerisque eget ligula vel, mattis accumsan augue." />
                 </TableRow>
             </TableLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/itemBtnUpdatePrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Update Price" />
-
-            <Button
-                android:id="@+id/itemBtnOpenURL"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Open URL" />
-
-            <Button
-                android:id="@+id/itemBtnModify"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Modify..." />
-
         </LinearLayout>
 
     </LinearLayout>

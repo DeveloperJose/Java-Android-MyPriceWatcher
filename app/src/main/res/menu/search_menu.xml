@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/search_menu_homedepot"
+        android:icon="@drawable/ic_store_homedepot"
+        android:title="Home Depot" />
+    <item
+        android:id="@+id/search_menu_lowes"
+        android:title="Lowe's" />
+    <item
+        android:id="@+id/search_menu_amazon"
+        android:title="Amazon" />
+    <item
+        android:id="@+id/search_menu_simulated"
+        android:title="Simulated Store" />
+</menu>
